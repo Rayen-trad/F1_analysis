@@ -8,7 +8,8 @@ import os
 # -------------------------------
 # Load dataset
 # -------------------------------
-DATA_PATH = r"C:\F1_analysis\data\processed\laps_2024_cleaned.csv"
+BASE_DIR = Path(__file__).resolve().parent.parent  # project root
+DATA_PATH = BASE_DIR / "data" / "processed" / "laps_2024_cleaned.csv"
 df = pd.read_csv(DATA_PATH)
 
 # -------------------------------
@@ -71,7 +72,7 @@ if drivers_selected:
     st.markdown("### Drivers")
     driver_cols = st.columns(len(drivers_selected))
     for col, driver in zip(driver_cols, drivers_selected):
-        img_path = os.path.join(r"C:\F1_analysis\assets\drivers", f"{driver}.png")
+        img_path = BASE_DIR / "assets" / "drivers" / f"{driver}.png"
         if os.path.exists(img_path):
             img = Image.open(img_path)
             col.image(img, width=300)  # Adjust width
