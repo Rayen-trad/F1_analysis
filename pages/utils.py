@@ -2,7 +2,8 @@ import pandas as pd
 import seaborn as sns
 
 # Load cleaned dataset
-DATA_PATH = r"C:\F1_analysis\data\processed\laps_2024_cleaned.csv"
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_PATH = BASE_DIR / "data" / "processed" / "laps_2024_cleaned.csv"
 df = pd.read_csv(DATA_PATH)
 
 # Get all races
