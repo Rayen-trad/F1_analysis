@@ -1,5 +1,7 @@
 import pandas as pd
 import seaborn as sns
+from pathlib import Path
+
 
 # Load cleaned dataset
 BASE_DIR = Path(__file__).resolve().parent.parent
