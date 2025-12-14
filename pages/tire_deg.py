@@ -7,8 +7,9 @@ import os
 # -------------------------------
 # Settings
 # -------------------------------
-DATA_PATH = r"C:\F1_analysis\data\processed\laps_2024_cleaned.csv"
-DRIVER_IMG_FOLDER = r"C:\F1_analysis\assets\drivers"
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_PATH = BASE_DIR / "data" / "processed" / "laps_2024_cleaned.csv"
+DRIVER_IMG_FOLDER = BASE_DIR / "assets" / "drivers"
 
 st.set_page_config(page_title="F1 Tire Degradation", layout="wide")
 st.title("F1 2024 Tire Degradation Analysis 🚦")
