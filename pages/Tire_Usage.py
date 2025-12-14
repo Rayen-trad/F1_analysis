@@ -20,6 +20,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent  # C:\F1_analysis
 DATA_PATH = BASE_DIR / "data" / "processed" / "f1_cleaned.csv"
+IMG_DIR = BASE_DIR / "assets" / "drivers"
 
 df = pd.read_csv(DATA_PATH)
 
@@ -41,7 +42,7 @@ drivers = race_df["Abbreviation"].unique()
 st.subheader("Drivers")
 cols = st.columns(len(drivers))
 for i, driver in enumerate(drivers):
-    img_path = f"C:/F1_analysis/assets/drivers/{driver}.png"
+    img_path = IMG_DIR / f"{driver}.png"
     if os.path.exists(img_path):
         cols[i].image(img_path, width=120, caption=driver)
     else:
