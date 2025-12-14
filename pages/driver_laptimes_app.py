@@ -9,14 +9,20 @@ from PIL import Image
 # -----------------------
 # Load Data
 # -----------------------
-DATA_PATH = r"C:\F1_analysis\data\processed\laps_2024_cleaned.csv"
+BASE_DIR = Path(__file__).resolve().parent.parent  # assumes this script is in a subfolder like 'pages'
+
+# -----------------------
+# Path to the dataset
+# -----------------------
+DATA_PATH = BASE_DIR / "data" / "processed" / "laps_2024_cleaned.csv"
 df = pd.read_csv(DATA_PATH)
 
 # -----------------------
 # Paths to images
 # -----------------------
-DRIVER_IMAGES_PATH = r"C:\F1_analysis\assets\drivers"
-CAR_IMAGES_PATH = r"C:\F1_analysis\assets\teams"
+DRIVER_IMAGES_PATH = BASE_DIR / "assets" / "drivers"
+CAR_IMAGES_PATH = BASE_DIR / "assets" / "teams"
+
 
 # -----------------------
 # Page setup
