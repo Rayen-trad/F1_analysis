@@ -1,4 +1,7 @@
-﻿altair==5.5.0
+pip>=25.3
+setuptools>=68.0.0
+wheel
+altair==5.5.0
 altgraph==0.17.4
 anyio==4.11.0
 argon2-cffi==25.1.0
@@ -160,4 +163,5 @@ Werkzeug==3.1.3
 wheel==0.45.1
 widgetsnbextension==4.0.14
 zipp==3.23.0
+
 
