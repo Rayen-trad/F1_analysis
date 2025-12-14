@@ -44,7 +44,7 @@ st.markdown("""
 # -------------------------------
 # F1 Logo
 # -------------------------------
-logo_path = r"C:\F1_analysis\assets\F1.svg.png"
+logo_path = "assets/F1.svg.png"
 if os.path.exists(logo_path):
     logo = Image.open(logo_path)
     st.image(logo, width=600)
@@ -67,27 +67,27 @@ analyses = [
     {
         "title": "Tire Strategies per Race",
         "description": "Visualize each driver’s tire stints during a race and how they managed their tire usage.",
-        "image": r"C:\F1_analysis\assets\Strategie.jpg"
+        "image": "assets/Strategie.jpg"
     },
     {
         "title": "Lap Times Overlay",
         "description": "Compare multiple drivers’ lap times across a single race with pit stop markers and tire compounds.",
-        "image": r"C:\F1_analysis\assets\laptimes.jpg"
+        "image": "assets/laptimes.jpg"
     },
     {
         "title": "Tire Degradation",
         "description": "Analyze lap time progression to understand tire wear patterns for drivers.",
-        "image": r"C:\F1_analysis\assets\Tire_deg.jpg"
+        "image": "assets/Tire_deg.jpg"
     },
     {
         "title": "Team Pace Comparison",
         "description": "Compare median lap times of all F1 teams across the season.",
-        "image": r"C:\F1_analysis\assets\team_pace.jpg"
+        "image": "assets/team_pace.jpg"
     },
     {
         "title": "Driver Lap Times Comparison",
         "description": "Compare selected drivers’ lap times in detail.",
-        "image": r"C:\F1_analysis\assets\driverlap.jpg"
+        "image": "assets/driverlap.jpg"
     }
 ]
 
