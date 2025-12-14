@@ -5,6 +5,8 @@ import pandas as pd
 import plotly.express as px
 import os
 from PIL import Image
+from pathlib import Path
+
 
 # -----------------------
 # Load Data
