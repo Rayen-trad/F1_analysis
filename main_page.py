@@ -2,6 +2,8 @@
 import streamlit as st
 from PIL import Image
 import os
+from pathlib import Path
+
 
 # -------------------------------
 # Page config
