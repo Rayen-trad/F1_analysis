@@ -10,7 +10,8 @@ import os
 # -------------------------------
 # Load Data
 # -------------------------------
-DATA_PATH = r"C:\F1_analysis\data\processed\laps_2024_cleaned.csv"
+BASE_DIR = Path(__file__).resolve().parent.parent 
+DATA_PATH = BASE_DIR / "data" / "processed" / "laps_2024_cleaned.csv"
 df = pd.read_csv(DATA_PATH)
 
 # Keep only personal best laps for fair team pace comparison
@@ -36,7 +37,7 @@ TEAM_COLORS = {
 # -------------------------------
 # Path to team images
 # -------------------------------
-TEAM_IMAGES_FOLDER = r"C:\F1_analysis\assets\teams"
+TEAM_IMAGES_FOLDER = BASE_DIR / "assets" / "teams"
 
 # -------------------------------
 # Streamlit Page Config
